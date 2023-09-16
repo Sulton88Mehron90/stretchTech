@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import './Error404.css';
-import bearImage from '../../images/ErrorBear.png';
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import "./Error404.css";
+import bearImage from "../../images/ErrorBear.png";
 
 const parkFunFacts = [
   "Yellowstone was the world's first national park, established in 1872.",
@@ -12,7 +12,7 @@ const parkFunFacts = [
 ];
 
 function Error404() {
-  const [funFact, setFunFact] = useState<string>('');
+  const [funFact, setFunFact] = useState<string>("");
 
   useEffect(() => {
     const randomIndex: number = Math.floor(Math.random() * parkFunFacts.length);
@@ -24,15 +24,25 @@ function Error404() {
       <h1 className="not-found-heading">404 - Page Not Found</h1>
       <div className="not-found-handling">
         <h3>
-          Sorry! That page doesn't seem to exist. Try going back to the home page.
+          Sorry! That page doesn't seem to exist. Try going back to the home
+          page.
         </h3>
       </div>
-      <NavLink to="/" style={{ textDecoration: 'none' }}>
-        <button className="go-home-button" aria-label="Go back to the home page">Go Back to Home Page</button>
+      <NavLink to="/" style={{ textDecoration: "none" }}>
+        <button
+          className="go-home-button"
+          aria-label="Go back to the home page"
+        >
+          Go Back to Home Page
+        </button>
       </NavLink>
       <div className="fun-fact-container" aria-label="Fun park fact">
-        <h2 className="fun-fact-heading">Here's a park 🌲 fun fact to cheer you up:</h2>
-        <p className="fun-fact">{funFact || "No fun facts available at the moment."}</p>
+        <h2 className="fun-fact-heading">
+          Here's a park 🌲 fun fact to cheer you up:
+        </h2>
+        <p className="fun-fact">
+          {funFact || "No fun facts available at the moment."}
+        </p>
       </div>
       <div className="image-container">
         <img src={bearImage} alt="Fun Bear" className="fun-bear-image" />

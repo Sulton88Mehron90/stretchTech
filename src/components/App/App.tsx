@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import ErrorComponent from "../ErrorComponent/ErrorComponent";
 import Error404 from "../ErrorComponent/Error404";
@@ -6,11 +6,11 @@ import Error500 from "../ErrorComponent/Error500";
 import LoadingComponent from "../LoadingComponent/LoadingComponent";
 import { ParkProps } from "../ParkCards/ParkCards";
 import ParksWrapper from "../ParksWrapper/ParksWrapper";
-import ParkDetails from '../ParkDetails/ParkDetails';
-import Favorites from '../Favorites/Favorites';
-import Header from "../Header/Header"
-import { getParksData } from '../../ApiCalls';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import ParkDetails from "../ParkDetails/ParkDetails";
+import Favorites from "../Favorites/Favorites";
+import Header from "../Header/Header";
+import { getParksData } from "../../ApiCalls";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 interface Image {
   url: string;
@@ -30,7 +30,7 @@ interface AppState {
   parks: Park[];
   isLoading: boolean;
   newError: string;
-  favorites: Park[]; //use id as favorites state (string)
+  favorites: Park[];
 }
 
 function App() {
@@ -49,22 +49,10 @@ function App() {
         }
       })
       .catch((response: any) => {
-        console.log("Caught an error: ", response);  //console. delete after you are done
         setError(`${response}` || "Failed to fetch parks!");
-        console.log("newError state set to: ", newError);  //console. delete after you are done
         setIsLoading(false);
       });
   }, []);
-
-  useEffect(() => {
-    console.log("Parks fetched:", parks);// console. dont forget to delete this useEffect.
-  }, [parks]);
-
-  useEffect(() => {
-    console.log("newError updated to:", newError); 
-  }, [newError]); 
-  
-
 
   const renderError = () => {
     if (newError) {
@@ -81,15 +69,35 @@ function App() {
         <LoadingComponent />
       ) : (
         <Routes>
-        <Route path="/" element={<ParksWrapper parks={parks} favorites={favorites} setFavorites={setFavorites} />} />
-        <Route path="/park/:parkCode" element={<ParkDetails setIsLoading={setIsLoading}/>} />
-        <Route path="/favorites" element={<Favorites favorites={favorites} setFavorites={setFavorites} />} />
-        <Route path="*" element={<Navigate to="/404" />} />
-        <Route path="/404" element={<Error404 />} />
-        <Route path="/500" element={<Error500 />} />
-        <Route path="/test-500" element={<Error500 />} /> 
-        <Route path="/error" element={<ErrorComponent error={{ message: newError }} />} />
-      </Routes>      
+          <Route
+            path="/"
+            element={
+              <ParksWrapper
+                parks={parks}
+                favorites={favorites}
+                setFavorites={setFavorites}
+              />
+            }
+          />
+          <Route
+            path="/park/:parkCode"
+            element={<ParkDetails setIsLoading={setIsLoading} />}
+          />
+          <Route
+            path="/favorites"
+            element={
+              <Favorites favorites={favorites} setFavorites={setFavorites} />
+            }
+          />
+          <Route path="*" element={<Navigate to="/404" />} />
+          <Route path="/404" element={<Error404 />} />
+          <Route path="/500" element={<Error500 />} />
+          <Route path="/test-500" element={<Error500 />} />
+          <Route
+            path="/error"
+            element={<ErrorComponent error={{ message: newError }} />}
+          />
+        </Routes>
       )}
     </main>
   );

@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import ErrorComponent from "../ErrorComponent/ErrorComponent";
 import { getIndividualPark, ParkData } from "../../ApiCalls";

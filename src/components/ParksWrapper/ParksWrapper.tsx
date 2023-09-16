@@ -1,4 +1,3 @@
-import React from "react";
 import "./ParksWrapper.css";
 import { ParkCards, ParkProps } from "../ParkCards/ParkCards";
 import HeroImage from "../HeroImage/HeroImage";
@@ -25,9 +24,9 @@ function ParksWrapper({ parks, favorites, setFavorites }: ParksWrapperProps) {
   });
 
   return (
-    <div className='App'>
+    <div className="App">
       <HeroImage />
-      <div className='parks-container'>{parkCards}</div>
+      <div className="parks-container">{parkCards}</div>
     </div>
   );
 }

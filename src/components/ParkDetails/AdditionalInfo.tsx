@@ -6,7 +6,7 @@ type AdditionalInfoProps = {
 
 function AdditionalInfo({ park }: AdditionalInfoProps) {
   return (
-    <div className='additional-info'>
+    <div className="additional-info">
       <h2>Plan Your Visit</h2>
       <ul>
         {Object.entries(park.operatingHours[0].standardHours).map(
@@ -19,7 +19,7 @@ function AdditionalInfo({ park }: AdditionalInfoProps) {
       </ul>
       <p>
         <strong>Directions:</strong>{" "}
-        <a href={park.directionsUrl} target='_blank' rel='noopener noreferrer'>
+        <a href={park.directionsUrl} target="_blank" rel="noopener noreferrer">
           Click here for directions
         </a>
       </p>

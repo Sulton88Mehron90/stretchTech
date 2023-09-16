@@ -9,13 +9,11 @@ interface FavoritesProps {
 }
 
 function FavoritesWrapper({ favorites, setFavorites }: FavoritesProps) {
-  
-  console.log('fav-park', "favs")
-  const parkCards = favorites.map(park => {
+  const parkCards = favorites.map((park) => {
     return (
       <ParkCards
         park={park}
-        favorites={favorites} 
+        favorites={favorites}
         setFavorites={setFavorites}
         key={park.parkCode}
       />
@@ -23,12 +21,16 @@ function FavoritesWrapper({ favorites, setFavorites }: FavoritesProps) {
   });
 
   return (
-    <div className='App'>
+    <div className="App">
       <HeroImage />
-      <Link to="/" className="back-button" style={{color: `inherit`, textDecoration: `inherit`}}>
+      <Link
+        to="/"
+        className="back-button"
+        style={{ color: `inherit`, textDecoration: `inherit` }}
+      >
         Back to Home
       </Link>
-      <div className='favorites-container'>{parkCards}</div>
+      <div className="favorites-container">{parkCards}</div>
     </div>
   );
 }
