@@ -30,7 +30,7 @@ interface AppState {
   parks: Park[];
   isLoading: boolean;
   newError: string;
-  favorites: Park[]; //use id as favorites state (string)
+  favorites: Park[];
 }
 
 function App() {
@@ -49,22 +49,10 @@ function App() {
         }
       })
       .catch((response: any) => {
-        console.log("Caught an error: ", response);  //console. delete after you are done
         setError(`${response}` || "Failed to fetch parks!");
-        console.log("newError state set to: ", newError);  //console. delete after you are done
         setIsLoading(false);
       });
   }, []);
-
-  useEffect(() => {
-    console.log("Parks fetched:", parks);// console. dont forget to delete this useEffect.
-  }, [parks]);
-
-  useEffect(() => {
-    console.log("newError updated to:", newError); 
-  }, [newError]); 
-  
-
 
   const renderError = () => {
     if (newError) {
