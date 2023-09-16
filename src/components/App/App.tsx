@@ -6,11 +6,11 @@ import Error500 from "../ErrorComponent/Error500";
 import LoadingComponent from "../LoadingComponent/LoadingComponent";
 import { ParkProps } from "../ParkCards/ParkCards";
 import ParksWrapper from "../ParksWrapper/ParksWrapper";
-import ParkDetails from '../ParkDetails/ParkDetails';
-import Favorites from '../Favorites/Favorites';
-import Header from "../Header/Header"
-import { getParksData } from '../../ApiCalls';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import ParkDetails from "../ParkDetails/ParkDetails";
+import Favorites from "../Favorites/Favorites";
+import Header from "../Header/Header";
+import { getParksData } from "../../ApiCalls";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 interface Image {
   url: string;
@@ -69,15 +69,35 @@ function App() {
         <LoadingComponent />
       ) : (
         <Routes>
-        <Route path="/" element={<ParksWrapper parks={parks} favorites={favorites} setFavorites={setFavorites} />} />
-        <Route path="/park/:parkCode" element={<ParkDetails setIsLoading={setIsLoading}/>} />
-        <Route path="/favorites" element={<Favorites favorites={favorites} setFavorites={setFavorites} />} />
-        <Route path="*" element={<Navigate to="/404" />} />
-        <Route path="/404" element={<Error404 />} />
-        <Route path="/500" element={<Error500 />} />
-        <Route path="/test-500" element={<Error500 />} /> 
-        <Route path="/error" element={<ErrorComponent error={{ message: newError }} />} />
-      </Routes>      
+          <Route
+            path="/"
+            element={
+              <ParksWrapper
+                parks={parks}
+                favorites={favorites}
+                setFavorites={setFavorites}
+              />
+            }
+          />
+          <Route
+            path="/park/:parkCode"
+            element={<ParkDetails setIsLoading={setIsLoading} />}
+          />
+          <Route
+            path="/favorites"
+            element={
+              <Favorites favorites={favorites} setFavorites={setFavorites} />
+            }
+          />
+          <Route path="*" element={<Navigate to="/404" />} />
+          <Route path="/404" element={<Error404 />} />
+          <Route path="/500" element={<Error500 />} />
+          <Route path="/test-500" element={<Error500 />} />
+          <Route
+            path="/error"
+            element={<ErrorComponent error={{ message: newError }} />}
+          />
+        </Routes>
       )}
     </main>
   );

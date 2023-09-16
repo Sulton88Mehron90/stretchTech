@@ -9,8 +9,6 @@ interface FavoritesProps {
 }
 
 function FavoritesWrapper({ favorites, setFavorites }: FavoritesProps) {
-  
-  console.log('fav-park', "favs")
   const parkCards = favorites.map(park => {
     return (
       <ParkCards
