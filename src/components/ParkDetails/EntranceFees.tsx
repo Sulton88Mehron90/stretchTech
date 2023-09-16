@@ -16,16 +16,16 @@ function EntranceFees({
   visibleFees,
 }: EntranceFeesProps) {
   return (
-    <div className='entrance-fees'>
+    <div className="entrance-fees">
       <h2>Entrance Fees</h2>
       <ul>
         {fees.map((fee, index) => (
-          <li key={index} className='fee-list'>
+          <li key={index} className="fee-list">
             <strong>
               {fee.title} - ${fee.cost}
             </strong>
             <button
-              className='show-fees-btn'
+              className="show-fees-btn"
               onClick={() => toggleVisibility(index.toString())}
             >
               {visibleFees[index] ? "Hide Details" : "Show Details"}
