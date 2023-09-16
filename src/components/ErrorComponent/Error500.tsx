@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Error500.css";
 import errorImage from "../../images/error.png";

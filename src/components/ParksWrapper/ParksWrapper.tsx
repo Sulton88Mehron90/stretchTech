@@ -1,4 +1,3 @@
-import React from "react";
 import "./ParksWrapper.css";
 import { ParkCards, ParkProps } from "../ParkCards/ParkCards";
 import HeroImage from "../HeroImage/HeroImage";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./ErrorComponent.css";
 import { NavLink } from "react-router-dom";
 import Groundhog from "../../images/groundhog.png";
