@@ -1,11 +1,11 @@
-import './HeroImage.css' 
-import yosemiteHero from '../../images/yosemite-hero-cropped.jpeg'
+import "./HeroImage.css";
+import yosemiteHero from "../../images/yosemite-hero-cropped.jpeg";
 
-function HeroImage(){
-return (
+function HeroImage() {
+  return (
     <div className="hero-img">
-        <img src={yosemiteHero} alt="Yosemite Valley"></img>
+      <img src={yosemiteHero} alt="Yosemite Valley"></img>
     </div>
-)
+  );
 }
-export default HeroImage
+export default HeroImage;
