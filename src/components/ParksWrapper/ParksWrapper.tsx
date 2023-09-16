@@ -25,9 +25,9 @@ function ParksWrapper({ parks, favorites, setFavorites }: ParksWrapperProps) {
   });
 
   return (
-    <div className='App'>
+    <div className="App">
       <HeroImage />
-      <div className='parks-container'>{parkCards}</div>
+      <div className="parks-container">{parkCards}</div>
     </div>
   );
 }
