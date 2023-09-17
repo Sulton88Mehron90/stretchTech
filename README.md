@@ -17,8 +17,6 @@ Park Details Page
 ![image](https://user-images.githubusercontent.com/130857864/268475140-8e2e8958-2d9d-45fc-865e-7476c107463d.png)
 ![image](https://user-images.githubusercontent.com/130857864/268475144-6ff97427-0fbb-4c8f-aaac-67265a737485.png)
 ![image](https://user-images.githubusercontent.com/130857864/268475145-f6003c64-7855-4a0e-b358-4fd539d190b2.png)
-
-![image](https://github.com/Sulton88Mehron90/stretchTech/blob/main/src/images/404.png)
 ![image](./src/images/404.png)
 
 ### **GOALS**
