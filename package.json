@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marisa5280/stretchTech.git"
+    "url": "git+https://github.com/Sulton88Mehron90/stretchTech.git"
   },
-  "homepage": "https://marisa5280.github.io/stretchTech/",
+  "homepage": "https://Sulton88Mehron90.github.io/stretchTech/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
