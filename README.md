@@ -32,10 +32,20 @@ Park Details Page
 
 - [Marisa Wyatt](https://github.com/Marisa5280)
 - [Jen Ziel](https://github.com/jenziel) 
-- [Parvin A. Sattorova](https://github.com/Sulton88Mehron90)
+- <table>
+    <tr>
+        <td> Parvin A. Sattorova 
+            <a href="https://www.linkedin.com/in/parvin-sattorova-edwards-357526b3/">LinkedIn</a> || 
+            <a href="https://github.com/Sulton88Mehron90">GitHub</a> 
+        </td>
+    </tr>
+    <tr>
+        <td><img src="https://avatars.githubusercontent.com/u/119267809?v=4" alt="GitHub Avatar" width="150"></td>
+    </tr>
+</table>
 
 ### **LIVE SITE**
-[Parks Passport Site](https://marisa5280.github.io/stretchTech/)
+[Parks Passport Site](https://stretch-tech-pi.vercel.app/)
 
 ### **INSTALLATION INSTRUCTIONS**
 
